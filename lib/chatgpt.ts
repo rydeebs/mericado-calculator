@@ -17,9 +17,10 @@ const getOpenAIModel = () => {
   }
 
   try {
-    // Using correct property name: max_tokens instead of maxTokens
+    // Using the correct settings type for OpenAI completion
     return openai("gpt-3.5-turbo-instruct", {
-      max_tokens: 500,
+      maxTokens: 500,
+      temperature: 0.3,
     })
   } catch (error) {
     console.error("Error initializing OpenAI model:", error)

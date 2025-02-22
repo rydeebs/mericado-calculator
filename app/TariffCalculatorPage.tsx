@@ -1,6 +1,6 @@
 "use client"
 
-import TariffCalculator from "@/components/tariff-calculator"
+import TariffCalculator from '@/components/tariff-calculator/index'
 
 export default function TariffCalculatorPage() {
   return (

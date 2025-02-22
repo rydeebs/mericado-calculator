@@ -341,7 +341,7 @@ const Index = () => {
       <div className="max-w-4xl mx-auto">
         <Card className="p-6 bg-white/50 backdrop-blur-sm animate-fade-up shadow-xl rounded-xl border-gray-200/50">
           {!isOpenAIKeySet && (
-            <Alert variant="warning" className="mb-4">
+            <Alert variant="default" className="mb-4">
               <AlertDescription>
                 {error ||
                   "OpenAI API key is not set or invalid. Some features are unavailable. Please check your .env.local file and ensure the OPENAI_API_KEY is set correctly."}

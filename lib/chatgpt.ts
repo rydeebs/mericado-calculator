@@ -17,8 +17,9 @@ const getOpenAIModel = () => {
   }
 
   try {
-    return openai("gpt-4", {
-      apiKey: process.env.OPENAI_API_KEY,
+    // Using correct property name: max_tokens instead of maxTokens
+    return openai("gpt-3.5-turbo-instruct", {
+      max_tokens: 500,
     })
   } catch (error) {
     console.error("Error initializing OpenAI model:", error)
@@ -77,7 +78,7 @@ Country of Origin: ${country}`
 }
 
 export async function calculateDutyRate(htsCode: string, country: string): Promise<string> {
-  if (!process.env.OPENAI_API_KEY) {
+  if (!OPENAI_API_KEY) {
     throw new Error("OPENAI_API_KEY is not set. Duty rate calculation feature is unavailable.")
   }
 

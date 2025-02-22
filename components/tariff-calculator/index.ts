@@ -1,1 +1,1 @@
-export { default } from '../tariff-calculator' 
+export { default } from './tariff-calculator' 

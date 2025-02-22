@@ -17,11 +17,8 @@ const getOpenAIModel = () => {
   }
 
   try {
-    // Using the correct settings type for OpenAI completion
-    return openai("gpt-3.5-turbo-instruct", {
-      maxTokens: 500,
-      temperature: 0.3,
-    })
+    // Using the model without additional settings
+    return openai("gpt-3.5-turbo-instruct")
   } catch (error) {
     console.error("Error initializing OpenAI model:", error)
     throw new Error("Failed to initialize OpenAI model. Please check your API key and try again.")

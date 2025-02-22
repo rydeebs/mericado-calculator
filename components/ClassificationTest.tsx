@@ -64,7 +64,7 @@ export default function ClassificationTest() {
             <Input
               id="description"
               value={description}
-              onChange={(e) => setDescription(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setDescription(e.target.value)}
               placeholder="Enter product description"
               className="mt-1"
             />
